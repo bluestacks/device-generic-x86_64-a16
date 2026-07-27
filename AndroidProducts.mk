@@ -15,4 +15,10 @@
 #
 
 PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/android_x86_64.mk \
     $(LOCAL_DIR)/mini_x86_64.mk
+
+COMMON_LUNCH_CHOICES := \
+    android_x86_64-trunk_staging-eng \
+    android_x86_64-trunk_staging-user \
+    android_x86_64-trunk_staging-userdebug
