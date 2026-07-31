@@ -23,8 +23,4 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 512
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
-# HD guest modules are intentionally discovered from the sibling app-player
-# source tree. Limit the legacy outside-include exception to this product.
-BUILD_BROKEN_OUTSIDE_INCLUDE_DIRS := true
-
 include device/generic/common/BoardConfig.mk
