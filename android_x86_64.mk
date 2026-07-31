@@ -26,8 +26,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.gralloc=bst \
     ro.hardware.egl=emulation
 
-PRODUCT_ENFORCE_VINTF_MANIFEST := true
-
 # Keep the product exclusions at the device layer so release configuration in
 # build/make remains untouched.
 PRODUCT_PACKAGES -= \
