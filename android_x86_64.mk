@@ -20,6 +20,7 @@ $(call inherit-product,device/generic/common/x86_64.mk)
 # BlueStacks runtime services required by the Windows Android-x86_64 image.
 PRODUCT_PACKAGES += \
     hwservicemanager \
+    vndservicemanager \
     android.hardware.power-service.example
 
 PRODUCT_PROPERTY_OVERRIDES += \
