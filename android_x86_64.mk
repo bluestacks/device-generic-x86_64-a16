@@ -17,6 +17,25 @@
 # includes the base of Android-x86 platform
 $(call inherit-product,device/generic/common/x86_64.mk)
 
+# BlueStacks runtime services required by the Windows Android-x86_64 image.
+PRODUCT_PACKAGES += \
+    hwservicemanager \
+    android.hardware.power-service.example
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.gralloc=bst \
+    ro.hardware.egl=emulation
+
+PRODUCT_ENFORCE_VINTF_MANIFEST := true
+
+# Keep the product exclusions at the device layer so release configuration in
+# build/make remains untouched.
+PRODUCT_PACKAGES -= \
+    BasicDreams \
+    BluetoothMidiService \
+    ManagedProvisioning \
+    MmsService
+
 # Overrides
 PRODUCT_NAME := android_x86_64
 PRODUCT_BRAND := Android-x86
