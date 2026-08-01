@@ -25,7 +25,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.gralloc=bst \
-    ro.hardware.egl=emulation
+    ro.hardware.egl=emulation \
+    ro.hardware.audio.primary=bst \
+    ro.hardware.camera=bst \
+    ro.hardware.lights=bst \
+    ro.hardware.memtrack=bst \
+    ro.hardware.power=bst
 
 # Preserve the validated AOSP16 qvirt policy on the Windows product. Android
 # 16 enforces this globally; keeping it here documents the board-level source.
