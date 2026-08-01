@@ -24,3 +24,9 @@ BOARD_FLASH_BLOCK_SIZE := 512
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
 include device/generic/common/BoardConfig.mk
+
+# android_x86_64 does not inherit the goldfish generic product, so attach the
+# legacy BlueStacks graphics declarations used by the external HIDL stack.
+DEVICE_MANIFEST_FILE += device/generic/common/manifest/android.hardware.graphics.allocator@2.0.xml
+DEVICE_MANIFEST_FILE += device/generic/common/manifest/android.hardware.graphics.composer@2.1.xml
+DEVICE_MANIFEST_FILE += device/generic/common/manifest/android.hardware.graphics.mapper@2.1.xml
