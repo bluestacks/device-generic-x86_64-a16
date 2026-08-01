@@ -27,9 +27,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.gralloc=bst \
     ro.hardware.egl=emulation
 
-# Match the verified AOSP16 Windows image: keep legacy HIDL declarations but
-# do not enforce the modern framework matrix against those services.
-PRODUCT_ENFORCE_VINTF_MANIFEST := false
+# Preserve the validated AOSP16 qvirt policy on the Windows product. Android
+# 16 enforces this globally; keeping it here documents the board-level source.
+PRODUCT_ENFORCE_VINTF_MANIFEST := true
 
 # Keep the product exclusions at the device layer so release configuration in
 # build/make remains untouched.

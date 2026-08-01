@@ -1,0 +1,27 @@
+<compatibility-matrix version="1.0" type="framework" level="8">
+    <!-- The Windows renderer still uses the validated goldfish HIDL stack. -->
+    <hal format="hidl" optional="true">
+        <name>android.hardware.graphics.allocator</name>
+        <version>2.0</version>
+        <interface>
+            <name>IAllocator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.graphics.composer</name>
+        <version>2.1</version>
+        <interface>
+            <name>IComposer</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hidl.manager</name>
+        <version>1.2</version>
+        <interface>
+            <name>IServiceManager</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>
