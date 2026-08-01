@@ -30,6 +30,3 @@ include device/generic/common/BoardConfig.mk
 DEVICE_MANIFEST_FILE += device/generic/common/manifest/android.hardware.graphics.allocator@2.0.xml
 DEVICE_MANIFEST_FILE += device/generic/common/manifest/android.hardware.graphics.composer@2.1.xml
 DEVICE_MANIFEST_FILE += device/generic/common/manifest/android.hardware.graphics.mapper@2.1.xml
-
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    device/generic/x86_64/framework_compatibility_matrix.xml
