@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+# Use the release ART APEX for the production-compatible BlueStacks guest,
+# including eng builds used by the Windows image pipeline.
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
 # includes the base of Android-x86 platform
 $(call inherit-product,device/generic/common/x86_64.mk)
 
@@ -35,14 +39,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Preserve the validated AOSP16 qvirt policy on the Windows product. Android
 # 16 enforces this globally; keeping it here documents the board-level source.
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
-
-# Keep the product exclusions at the device layer so release configuration in
-# build/make remains untouched.
-PRODUCT_PACKAGES -= \
-    BasicDreams \
-    BluetoothMidiService \
-    ManagedProvisioning \
-    MmsService
 
 # Overrides
 PRODUCT_NAME := android_x86_64
