@@ -31,7 +31,8 @@ BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 BOARD_SEPOLICY_DIRS += device/generic/common/sepolicy/houdini
 
 # android_x86_64 does not inherit the goldfish generic product, so attach the
-# legacy BlueStacks graphics declarations used by the external HIDL stack.
+# retained BlueStacks HAL declarations and the external HIDL graphics stack.
+DEVICE_MANIFEST_FILE += device/generic/x86_64/manifest_bst_legacy_hal.xml
 DEVICE_MANIFEST_FILE += device/generic/common/manifest/android.hardware.graphics.allocator@2.0.xml
 DEVICE_MANIFEST_FILE += device/generic/common/manifest/android.hardware.graphics.composer@2.1.xml
 DEVICE_MANIFEST_FILE += device/generic/common/manifest/android.hardware.graphics.mapper@2.1.xml
