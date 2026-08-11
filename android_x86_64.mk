@@ -36,6 +36,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.memtrack=bst \
     ro.hardware.power=bst
 
+# Linux 6.12 no longer exposes /dev/ashmem. Use the kernel's enabled ashmem
+# compatibility layer for legacy BlueStacks gralloc buffers backed by memfd.
+PRODUCT_SYSTEM_PROPERTIES += \
+    sys.use_memfd=true
+
 # Preserve the validated AOSP16 qvirt policy on the Windows product. Android
 # 16 enforces this globally; keeping it here documents the board-level source.
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
