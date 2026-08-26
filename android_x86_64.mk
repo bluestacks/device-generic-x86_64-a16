@@ -28,14 +28,10 @@ PRODUCT_PACKAGES += \
     vndservicemanager \
     android.hardware.power-service.example
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.gralloc=bst \
-    ro.hardware.egl=emulation \
-    ro.hardware.audio.primary=bst \
-    ro.hardware.camera=bst \
-    ro.hardware.lights=bst \
-    ro.hardware.memtrack=bst \
-    ro.hardware.power=bst
+# BS-A16: the ro.hardware.*=bst props leak the custom HALs to Play
+# Integrity device fingerprinting (A13 leaves them unset).
+# libhardware resolves the legacy passthrough HALs via its explicit
+# "bst" fallback before the default, so the props are unnecessary.
 
 # Linux 6.12 no longer exposes /dev/ashmem. Use the kernel's enabled ashmem
 # compatibility layer for legacy BlueStacks gralloc buffers backed by memfd.
