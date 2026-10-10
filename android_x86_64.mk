@@ -42,6 +42,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # 16 enforces this globally; keeping it here documents the board-level source.
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=240
+
 # Overrides
 PRODUCT_NAME := android_x86_64
 PRODUCT_BRAND := Android-x86
